@@ -1,0 +1,1127 @@
+/usr/local/bin/python3.7 /Users/Dimitris/PycharmProjects/stock_deep_learning/dataset.py
+Using TensorFlow backend.
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+[2019-09-02 23:29:40.500793] - Loading Datasets...
+[2019-09-02 23:30:16.193801] - Loaded 124165 rows with 2 columns of news headlines
+[2019-09-02 23:30:16.193876] - Duplicate Rows except first occurrence based on all columns are : 0
+[2019-09-02 23:30:16.315719] - Loaded 1811 rows with 7 columns of historical prices of FB stock
+[2019-09-02 23:30:16.381551] - Equal unique Dates in two dataframes of 1578
+1577it [00:21, 122.26it/s]
+
+[2019-09-02 23:30:38.074837] - Prices and Headlines list are equals
+[2019-09-02 23:30:57.837805] - Size of Vocabulary: 44523
+[2019-09-02 23:35:07.105641] - Word embeddings: 2196016
+[2019-09-02 23:35:07.120362] - Number of words missing from GloVe: 127
+[2019-09-02 23:35:07.120420] - Percent of words that are missing from vocabulary: 0.29%
+[2019-09-02 23:35:07.209558] - Number of Words we will use: 36064
+[2019-09-02 23:35:07.213806] - Total Number of Unique Words: 44523
+[2019-09-02 23:35:07.213876] - Percent of Words we will use: 81.01%
+[2019-09-02 23:35:07.818107] - Vocabulary to Integers Length: 36066
+[2019-09-02 23:35:07.818179] - Word Embeddings Matrix Length: 36066
+[2019-09-02 23:35:08.547682] - Total number of words in headlines: 664604
+[2019-09-02 23:35:08.547747] - Total number of UNKs in headlines:  11846
+[2019-09-02 23:35:08.547769] - Percent of words that are UNK:      1.78%
+         counts
+count  2.000000
+mean   7.500000
+std    0.707107
+min    7.000000
+25%    7.250000
+50%    7.500000
+75%    7.750000
+max    8.000000
+[2019-09-02 23:35:08.771214] - Train dataset length: 1340
+[2019-09-02 23:35:08.771274] - Test  dataset length: 237
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+merge_1 (Merge)              (None, 512)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 256)               131328    
+_________________________________________________________________
+dropout_7 (Dropout)          (None, 256)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 128)               32896     
+_________________________________________________________________
+dropout_8 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+output (Dense)               (None, 1)                 129       
+=================================================================
+Total params: 22,480,945
+Trainable params: 22,480,945
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+[2019-09-02 23:35:10.813975] - Current model: Deeper=True, Wider=True, LR=0.001, Dropout=0.3
+
+[2019-09-02 23:35:10.814027] - Saving Model as question_pairs_weights_deeper=True_wider=True_lr=0.001_dropout=0.3
+[2019-09-02 23:35:10.819966] - Saved model to disk on path /Users/Dimitris/PycharmProjects/stock_deep_learning/model/question_pairs_weights_deeper=True_wider=True_lr=0.001_dropout=0.3.json
+Train on 1139 samples, validate on 201 samples
+Epoch 1/100
+
+ 128/1139 [==>...........................] - ETA: 1:06 - loss: 141.7454WARNING: Logging before flag parsing goes to stderr.
+W0902 23:35:08.771486 140735994184576 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:68: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+W0902 23:35:08.805228 140735994184576 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:507: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+W0902 23:35:08.819279 140735994184576 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3831: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+W0902 23:35:08.837080 140735994184576 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:167: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+W0902 23:35:08.837296 140735994184576 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:174: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+W0902 23:35:09.198695 140735994184576 deprecation.py:506] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3138: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+/Users/Dimitris/PycharmProjects/stock_deep_learning/training.py:172: UserWarning: The `Merge` layer is deprecated and will be removed after 08/2017. Use instead layers from `keras.layers.merge`, e.g. `add`, `concatenate`, etc.
+  model.add(Merge([model1, model2], mode='concat'))
+W0902 23:35:10.694168 140735994184576 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/optimizers.py:757: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+W0902 23:35:11.490458 140735994184576 deprecation.py:323] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+
+ 256/1139 [=====>........................] - ETA: 42s - loss: 1659639.1227
+ 384/1139 [=========>....................] - ETA: 32s - loss: 1425679.0193
+ 512/1139 [============>.................] - ETA: 24s - loss: nan         
+ 640/1139 [===============>..............] - ETA: 19s - loss: nan
+ 768/1139 [===================>..........] - ETA: 13s - loss: nan
+ 896/1139 [======================>.......] - ETA: 8s - loss: nan 
+1024/1139 [=========================>....] - ETA: 4s - loss: nan
+1139/1139 [==============================] - 42s 37ms/step - loss: nan - val_loss: nan
+Epoch 2/100
+
+ 128/1139 [==>...........................] - ETA: 33s - loss: nan
+ 256/1139 [=====>........................] - ETA: 28s - loss: nan
+ 384/1139 [=========>....................] - ETA: 24s - loss: nan
+ 512/1139 [============>.................] - ETA: 19s - loss: nan
+ 640/1139 [===============>..............] - ETA: 15s - loss: nan
+ 768/1139 [===================>..........] - ETA: 11s - loss: nan
+ 896/1139 [======================>.......] - ETA: 7s - loss: nan 
+1024/1139 [=========================>....] - ETA: 3s - loss: nan
+1139/1139 [==============================] - 37s 33ms/step - loss: nan - val_loss: nan
+Epoch 3/100
+
+ 128/1139 [==>...........................] - ETA: 32s - loss: nan
+ 256/1139 [=====>........................] - ETA: 28s - loss: nan
+ 384/1139 [=========>....................] - ETA: 24s - loss: nan
+ 512/1139 [============>.................] - ETA: 20s - loss: nan
+ 640/1139 [===============>..............] - ETA: 16s - loss: nan
+ 768/1139 [===================>..........] - ETA: 11s - loss: nan
+ 896/1139 [======================>.......] - ETA: 7s - loss: nan 
+1024/1139 [=========================>....] - ETA: 3s - loss: nan
+1139/1139 [==============================] - 38s 33ms/step - loss: nan - val_loss: nan
+Epoch 4/100
+
+ 128/1139 [==>...........................] - ETA: 32s - loss: nan
+ 256/1139 [=====>........................] - ETA: 28s - loss: nan
+ 384/1139 [=========>....................] - ETA: 25s - loss: nan
+ 512/1139 [============>.................] - ETA: 20s - loss: nan
+ 640/1139 [===============>..............] - ETA: 16s - loss: nan
+ 768/1139 [===================>..........] - ETA: 12s - loss: nan
+ 896/1139 [======================>.......] - ETA: 7s - loss: nan 
+1024/1139 [=========================>....] - ETA: 3s - loss: nan
+1139/1139 [==============================] - 38s 34ms/step - loss: nan - val_loss: nan
+
+Epoch 00004: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 5/100
+
+ 128/1139 [==>...........................] - ETA: 32s - loss: nan
+ 256/1139 [=====>........................] - ETA: 27s - loss: nan
+ 384/1139 [=========>....................] - ETA: 23s - loss: nan
+ 512/1139 [============>.................] - ETA: 19s - loss: nan
+ 640/1139 [===============>..............] - ETA: 15s - loss: nan
+ 768/1139 [===================>..........] - ETA: 11s - loss: nan
+ 896/1139 [======================>.......] - ETA: 7s - loss: nan 
+1024/1139 [=========================>....] - ETA: 3s - loss: nan
+1139/1139 [==============================] - 37s 32ms/step - loss: nan - val_loss: nan
+Epoch 00005: early stopping
+[2019-09-02 23:38:27.583954] - Predictions of model question_pairs_weights_deeper=True_wider=True_lr=0.001_dropout=0.3
+X Contains finite
+Y Contains finite
+X any:  False
+X any True
+Y any:  False
+Y any True
+
+ 32/237 [===>..........................] - ETA: 4s
+ 64/237 [=======>......................] - ETA: 2s
+ 96/237 [===========>..................] - ETA: 1s
+128/237 [===============>..............] - ETA: 1s
+160/237 [===================>..........] - ETA: 0s
+192/237 [=======================>......] - ETA: 0s
+224/237 [===========================>..] - ETA: 0s
+237/237 [==============================] - 3s 11ms/step
+predictions Contains finite
+Pred any:  True
+Finite any False
+[2019-09-02 23:38:30.159647] - Mean Squared Error:  0.5367569134425296
+[2019-09-02 23:38:30.162087] - Median Absolute Error:  40.970001220703125
+[2019-09-02 23:38:30.162118] - Summary of actual opening price changes
+                 
+count  237.000000
+mean    -0.013671
+std      3.276541
+min    -40.830002
+25%     -0.739990
+50%      0.139999
+75%      1.209999
+max      9.529999
+
+[2019-09-02 23:38:30.177637] - Summary of predicted opening price changes
+                 
+count  237.000000
+mean   -40.830002
+std      0.000000
+min    -40.830002
+25%    -40.830002
+50%    -40.830002
+75%    -40.830002
+max    -40.830002
+[2019-09-02 23:38:30.392478] - Predicted values matched the actual direction 43.04% of the time.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+merge_2 (Merge)              (None, 1024)              0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 512)               524800    
+_________________________________________________________________
+dropout_15 (Dropout)         (None, 512)               0         
+_________________________________________________________________
+dense_4 (Dense)              (None, 256)               131328    
+_________________________________________________________________
+dropout_16 (Dropout)         (None, 256)               0         
+_________________________________________________________________
+output (Dense)               (None, 1)                 257       
+=================================================================
+Total params: 24,846,001
+Trainable params: 24,846,001
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+[2019-09-02 23:38:34.211411] - Current model: Deeper=True, Wider=True, LR=0.001, Dropout=0.5
+
+[2019-09-02 23:38:34.211478] - Saving Model as question_pairs_weights_deeper=True_wider=True_lr=0.001_dropout=0.5
+[2019-09-02 23:38:34.217631] - Saved model to disk on path /Users/Dimitris/PycharmProjects/stock_deep_learning/model/question_pairs_weights_deeper=True_wider=True_lr=0.001_dropout=0.5.json
+Train on 1139 samples, validate on 201 samples
+Epoch 1/100
+/Users/Dimitris/PycharmProjects/stock_deep_learning/training.py:172: UserWarning: The `Merge` layer is deprecated and will be removed after 08/2017. Use instead layers from `keras.layers.merge`, e.g. `add`, `concatenate`, etc.
+  model.add(Merge([model1, model2], mode='concat'))
+
+ 128/1139 [==>...........................] - ETA: 2:29 - loss: 166962.1562
+ 256/1139 [=====>........................] - ETA: 1:53 - loss: nan        
+ 384/1139 [=========>....................] - ETA: 1:30 - loss: nan
+ 512/1139 [============>.................] - ETA: 1:11 - loss: nan
+ 640/1139 [===============>..............] - ETA: 55s - loss: nan 
+ 768/1139 [===================>..........] - ETA: 40s - loss: nan
+ 896/1139 [======================>.......] - ETA: 26s - loss: nan
+1024/1139 [=========================>....] - ETA: 12s - loss: nan
+1139/1139 [==============================] - 128s 112ms/step - loss: nan - val_loss: nan
+Epoch 2/100
+
+ 128/1139 [==>...........................] - ETA: 1:40 - loss: nan
+ 256/1139 [=====>........................] - ETA: 1:26 - loss: nan
+ 384/1139 [=========>....................] - ETA: 1:13 - loss: nan
+ 512/1139 [============>.................] - ETA: 1:01 - loss: nan
+ 640/1139 [===============>..............] - ETA: 48s - loss: nan 
+ 768/1139 [===================>..........] - ETA: 36s - loss: nan
+ 896/1139 [======================>.......] - ETA: 23s - loss: nan
+1024/1139 [=========================>....] - ETA: 11s - loss: nan
+1139/1139 [==============================] - 117s 103ms/step - loss: nan - val_loss: nan
+Epoch 3/100
+
+ 128/1139 [==>...........................] - ETA: 1:38 - loss: nan
+ 256/1139 [=====>........................] - ETA: 1:23 - loss: nan
+ 384/1139 [=========>....................] - ETA: 1:11 - loss: nan
+ 512/1139 [============>.................] - ETA: 58s - loss: nan 
+ 640/1139 [===============>..............] - ETA: 46s - loss: nan
+ 768/1139 [===================>..........] - ETA: 34s - loss: nan
+ 896/1139 [======================>.......] - ETA: 22s - loss: nan
+1024/1139 [=========================>....] - ETA: 10s - loss: nan
+1139/1139 [==============================] - 113s 99ms/step - loss: nan - val_loss: nan
+Epoch 4/100
+
+ 128/1139 [==>...........................] - ETA: 1:34 - loss: nan
+ 256/1139 [=====>........................] - ETA: 1:22 - loss: nan
+ 384/1139 [=========>....................] - ETA: 1:10 - loss: nan
+ 512/1139 [============>.................] - ETA: 58s - loss: nan 
+ 640/1139 [===============>..............] - ETA: 47s - loss: nan
+ 768/1139 [===================>..........] - ETA: 35s - loss: nan
+ 896/1139 [======================>.......] - ETA: 22s - loss: nan
+1024/1139 [=========================>....] - ETA: 10s - loss: nan
+1139/1139 [==============================] - 113s 99ms/step - loss: nan - val_loss: nan
+
+Epoch 00004: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 5/100
+
+ 128/1139 [==>...........................] - ETA: 1:34 - loss: nan
+ 256/1139 [=====>........................] - ETA: 1:22 - loss: nan
+ 384/1139 [=========>....................] - ETA: 1:10 - loss: nan
+ 512/1139 [============>.................] - ETA: 58s - loss: nan 
+ 640/1139 [===============>..............] - ETA: 47s - loss: nan
+ 768/1139 [===================>..........] - ETA: 35s - loss: nan
+ 896/1139 [======================>.......] - ETA: 23s - loss: nan
+1024/1139 [=========================>....] - ETA: 10s - loss: nan
+1139/1139 [==============================] - 113s 99ms/step - loss: nan - val_loss: nan
+Epoch 00005: early stopping
+[2019-09-02 23:48:22.647223] - Predictions of model question_pairs_weights_deeper=True_wider=True_lr=0.001_dropout=0.5
+X Contains finite
+Y Contains finite
+X any:  False
+X any True
+Y any:  False
+Y any True
+
+ 32/237 [===>..........................] - ETA: 10s
+ 64/237 [=======>......................] - ETA: 7s 
+ 96/237 [===========>..................] - ETA: 5s
+128/237 [===============>..............] - ETA: 4s
+160/237 [===================>..........] - ETA: 3s
+192/237 [=======================>......] - ETA: 1s
+224/237 [===========================>..] - ETA: 0s
+237/237 [==============================] - 9s 39ms/step
+predictions Contains finite
+Pred any:  True
+Finite any False
+[2019-09-02 23:48:31.900386] - Mean Squared Error:  0.5367569134425296
+[2019-09-02 23:48:31.902766] - Median Absolute Error:  40.970001220703125
+[2019-09-02 23:48:31.902795] - Summary of actual opening price changes
+                 
+count  237.000000
+mean    -0.013671
+std      3.276541
+min    -40.830002
+25%     -0.739990
+50%      0.139999
+75%      1.209999
+max      9.529999
+
+[2019-09-02 23:48:31.916075] - Summary of predicted opening price changes
+                 
+count  237.000000
+mean   -40.830002
+std      0.000000
+min    -40.830002
+25%    -40.830002
+50%    -40.830002
+75%    -40.830002
+max    -40.830002
+[2019-09-02 23:48:32.117243] - Predicted values matched the actual direction 43.04% of the time.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+merge_3 (Merge)              (None, 1024)              0         
+_________________________________________________________________
+dense_5 (Dense)              (None, 512)               524800    
+_________________________________________________________________
+dropout_23 (Dropout)         (None, 512)               0         
+_________________________________________________________________
+dense_6 (Dense)              (None, 256)               131328    
+_________________________________________________________________
+dropout_24 (Dropout)         (None, 256)               0         
+_________________________________________________________________
+output (Dense)               (None, 1)                 257       
+=================================================================
+Total params: 24,846,001
+Trainable params: 24,846,001
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+[2019-09-02 23:48:37.150809] - Current model: Deeper=True, Wider=False, LR=0.001, Dropout=0.3
+
+[2019-09-02 23:48:37.150885] - Saving Model as question_pairs_weights_deeper=True_wider=False_lr=0.001_dropout=0.3
+[2019-09-02 23:48:37.156011] - Saved model to disk on path /Users/Dimitris/PycharmProjects/stock_deep_learning/model/question_pairs_weights_deeper=True_wider=False_lr=0.001_dropout=0.3.json
+/Users/Dimitris/PycharmProjects/stock_deep_learning/training.py:172: UserWarning: The `Merge` layer is deprecated and will be removed after 08/2017. Use instead layers from `keras.layers.merge`, e.g. `add`, `concatenate`, etc.
+  model.add(Merge([model1, model2], mode='concat'))
+Train on 1139 samples, validate on 201 samples
+Epoch 1/100
+
+ 128/1139 [==>...........................] - ETA: 2:13 - loss: 15.6140
+ 256/1139 [=====>........................] - ETA: 1:42 - loss: 252.5890
+ 384/1139 [=========>....................] - ETA: 1:23 - loss: 177.9176
+ 512/1139 [============>.................] - ETA: 1:06 - loss: 136.6632
+ 640/1139 [===============>..............] - ETA: 52s - loss: 113.1185 
+ 768/1139 [===================>..........] - ETA: 38s - loss: 95.9565 
+ 896/1139 [======================>.......] - ETA: 24s - loss: 82.6180
+1024/1139 [=========================>....] - ETA: 11s - loss: 72.8066
+1139/1139 [==============================] - 120s 106ms/step - loss: 66.0718 - val_loss: 2.0659
+Epoch 2/100
+
+ 128/1139 [==>...........................] - ETA: 1:37 - loss: 4.2314
+ 256/1139 [=====>........................] - ETA: 1:25 - loss: 3.5840
+ 384/1139 [=========>....................] - ETA: 1:12 - loss: 3.0753
+ 512/1139 [============>.................] - ETA: 1:00 - loss: 2.9948
+ 640/1139 [===============>..............] - ETA: 47s - loss: 2.9219 
+ 768/1139 [===================>..........] - ETA: 35s - loss: 2.6376
+ 896/1139 [======================>.......] - ETA: 23s - loss: 2.3686
+1024/1139 [=========================>....] - ETA: 11s - loss: 2.1406
+1139/1139 [==============================] - 116s 102ms/step - loss: 1.9635 - val_loss: 0.0975
+Epoch 3/100
+
+ 128/1139 [==>...........................] - ETA: 1:37 - loss: 0.3575
+ 256/1139 [=====>........................] - ETA: 1:24 - loss: 0.3908
+ 384/1139 [=========>....................] - ETA: 1:12 - loss: 0.3915
+ 512/1139 [============>.................] - ETA: 59s - loss: 0.3880 
+ 640/1139 [===============>..............] - ETA: 47s - loss: 0.3999
+ 768/1139 [===================>..........] - ETA: 35s - loss: 0.4181
+ 896/1139 [======================>.......] - ETA: 23s - loss: 0.4149
+1024/1139 [=========================>....] - ETA: 11s - loss: 0.4206
+1139/1139 [==============================] - 115s 101ms/step - loss: 0.4232 - val_loss: 0.0251
+Epoch 4/100
+
+ 128/1139 [==>...........................] - ETA: 1:36 - loss: 0.4210
+ 256/1139 [=====>........................] - ETA: 1:23 - loss: 0.3948
+ 384/1139 [=========>....................] - ETA: 1:11 - loss: 0.3750
+ 512/1139 [============>.................] - ETA: 59s - loss: 0.3866 
+ 640/1139 [===============>..............] - ETA: 47s - loss: 0.3734
+ 768/1139 [===================>..........] - ETA: 35s - loss: 0.3500
+ 896/1139 [======================>.......] - ETA: 23s - loss: 0.3323
+1024/1139 [=========================>....] - ETA: 11s - loss: 0.3199
+1139/1139 [==============================] - 115s 101ms/step - loss: 0.3100 - val_loss: 0.1089
+Epoch 5/100
+
+ 128/1139 [==>...........................] - ETA: 1:35 - loss: 0.1899
+ 256/1139 [=====>........................] - ETA: 1:24 - loss: 0.1960
+ 384/1139 [=========>....................] - ETA: 1:12 - loss: 0.2088
+ 512/1139 [============>.................] - ETA: 59s - loss: 0.2045 
+ 640/1139 [===============>..............] - ETA: 47s - loss: 0.2010
+ 768/1139 [===================>..........] - ETA: 35s - loss: 0.1950
+ 896/1139 [======================>.......] - ETA: 23s - loss: 0.1861
+1024/1139 [=========================>....] - ETA: 11s - loss: 0.1849
+1139/1139 [==============================] - 115s 101ms/step - loss: 0.1869 - val_loss: 0.0743
+Epoch 6/100
+
+ 128/1139 [==>...........................] - ETA: 1:36 - loss: 0.1571
+ 256/1139 [=====>........................] - ETA: 1:23 - loss: 0.1557
+ 384/1139 [=========>....................] - ETA: 1:11 - loss: 0.1739
+ 512/1139 [============>.................] - ETA: 1:01 - loss: 0.1690
+ 640/1139 [===============>..............] - ETA: 48s - loss: 0.1665 
+ 768/1139 [===================>..........] - ETA: 35s - loss: 0.1614
+ 896/1139 [======================>.......] - ETA: 23s - loss: 0.1601
+1024/1139 [=========================>....] - ETA: 11s - loss: 0.1549
+1139/1139 [==============================] - 115s 101ms/step - loss: 0.1526 - val_loss: 0.1131
+Epoch 7/100
+
+ 128/1139 [==>...........................] - ETA: 1:36 - loss: 0.1163
+ 256/1139 [=====>........................] - ETA: 1:24 - loss: 0.1289
+ 384/1139 [=========>....................] - ETA: 1:13 - loss: 0.1252
+ 512/1139 [============>.................] - ETA: 1:00 - loss: 0.1259
+ 640/1139 [===============>..............] - ETA: 48s - loss: 0.1256 
+ 768/1139 [===================>..........] - ETA: 35s - loss: 0.1252
+ 896/1139 [======================>.......] - ETA: 23s - loss: 0.1269
+1024/1139 [=========================>....] - ETA: 11s - loss: 0.1257
+1139/1139 [==============================] - 116s 102ms/step - loss: 0.1248 - val_loss: 0.1124
+
+Epoch 00007: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 8/100
+
+ 128/1139 [==>...........................] - ETA: 1:35 - loss: 0.1148
+ 256/1139 [=====>........................] - ETA: 1:24 - loss: 0.1114
+ 384/1139 [=========>....................] - ETA: 1:12 - loss: 0.1101
+ 512/1139 [============>.................] - ETA: 1:00 - loss: 0.1148
+ 640/1139 [===============>..............] - ETA: 47s - loss: 0.1148 
+ 768/1139 [===================>..........] - ETA: 35s - loss: 0.1168
+ 896/1139 [======================>.......] - ETA: 23s - loss: 0.1132
+1024/1139 [=========================>....] - ETA: 11s - loss: 0.1130
+1139/1139 [==============================] - 115s 101ms/step - loss: 0.1126 - val_loss: 0.1112
+Epoch 00008: early stopping
+[2019-09-03 00:04:16.042104] - Predictions of model question_pairs_weights_deeper=True_wider=False_lr=0.001_dropout=0.3
+X Contains finite
+Y Contains finite
+X any:  False
+X any True
+Y any:  False
+Y any True
+
+ 32/237 [===>..........................] - ETA: 11s
+ 64/237 [=======>......................] - ETA: 8s 
+ 96/237 [===========>..................] - ETA: 5s
+128/237 [===============>..............] - ETA: 4s
+160/237 [===================>..........] - ETA: 3s
+192/237 [=======================>......] - ETA: 1s
+224/237 [===========================>..] - ETA: 0s
+237/237 [==============================] - 9s 39ms/step
+predictions Contains finite
+Pred any:  False
+Finite any True
+[2019-09-03 00:04:25.386019] - Mean Squared Error:  0.11283535568985668
+[2019-09-03 00:04:25.388464] - Median Absolute Error:  16.960599899291992
+[2019-09-03 00:04:25.388494] - Summary of actual opening price changes
+                 
+count  237.000000
+mean    -0.013671
+std      3.276541
+min    -40.830002
+25%     -0.739990
+50%      0.139999
+75%      1.209999
+max      9.529999
+
+[2019-09-03 00:04:25.405048] - Summary of predicted opening price changes
+                 
+count  237.000000
+mean   -17.726017
+std      5.467945
+min    -23.869402
+25%    -23.869390
+50%    -16.796127
+75%    -13.420227
+max     -2.818333
+[2019-09-03 00:04:25.616697] - Predicted values matched the actual direction 43.04% of the time.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+merge_4 (Merge)              (None, 1024)              0         
+_________________________________________________________________
+dense_7 (Dense)              (None, 512)               524800    
+_________________________________________________________________
+dropout_31 (Dropout)         (None, 512)               0         
+_________________________________________________________________
+dense_8 (Dense)              (None, 256)               131328    
+_________________________________________________________________
+dropout_32 (Dropout)         (None, 256)               0         
+_________________________________________________________________
+output (Dense)               (None, 1)                 257       
+=================================================================
+Total params: 24,846,001
+Trainable params: 24,846,001
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+[2019-09-03 00:04:31.930161] - Current model: Deeper=True, Wider=False, LR=0.001, Dropout=0.5
+
+[2019-09-03 00:04:31.930215] - Saving Model as question_pairs_weights_deeper=True_wider=False_lr=0.001_dropout=0.5
+[2019-09-03 00:04:31.935904] - Saved model to disk on path /Users/Dimitris/PycharmProjects/stock_deep_learning/model/question_pairs_weights_deeper=True_wider=False_lr=0.001_dropout=0.5.json
+Train on 1139 samples, validate on 201 samples
+Epoch 1/100
+/Users/Dimitris/PycharmProjects/stock_deep_learning/training.py:172: UserWarning: The `Merge` layer is deprecated and will be removed after 08/2017. Use instead layers from `keras.layers.merge`, e.g. `add`, `concatenate`, etc.
+  model.add(Merge([model1, model2], mode='concat'))
+
+ 128/1139 [==>...........................] - ETA: 2:17 - loss: 443601.8750
+ 256/1139 [=====>........................] - ETA: 1:41 - loss: nan        
+ 384/1139 [=========>....................] - ETA: 1:22 - loss: nan
+ 512/1139 [============>.................] - ETA: 1:06 - loss: nan
+ 640/1139 [===============>..............] - ETA: 52s - loss: nan 
+ 768/1139 [===================>..........] - ETA: 38s - loss: nan
+ 896/1139 [======================>.......] - ETA: 24s - loss: nan
+1024/1139 [=========================>....] - ETA: 11s - loss: nan
+1139/1139 [==============================] - 121s 106ms/step - loss: nan - val_loss: nan
+Epoch 2/100
+
+ 128/1139 [==>...........................] - ETA: 1:36 - loss: nan
+ 256/1139 [=====>........................] - ETA: 1:27 - loss: nan
+ 384/1139 [=========>....................] - ETA: 1:14 - loss: nan
+ 512/1139 [============>.................] - ETA: 1:01 - loss: nan
+ 640/1139 [===============>..............] - ETA: 48s - loss: nan 
+ 768/1139 [===================>..........] - ETA: 36s - loss: nan
+ 896/1139 [======================>.......] - ETA: 23s - loss: nan
+1024/1139 [=========================>....] - ETA: 11s - loss: nan
+1139/1139 [==============================] - 116s 102ms/step - loss: nan - val_loss: nan
+Epoch 3/100
+
+ 128/1139 [==>...........................] - ETA: 1:37 - loss: nan
+ 256/1139 [=====>........................] - ETA: 1:27 - loss: nan
+ 384/1139 [=========>....................] - ETA: 1:14 - loss: nan
+ 512/1139 [============>.................] - ETA: 1:01 - loss: nan
+ 640/1139 [===============>..............] - ETA: 49s - loss: nan 
+ 768/1139 [===================>..........] - ETA: 36s - loss: nan
+ 896/1139 [======================>.......] - ETA: 23s - loss: nan
+1024/1139 [=========================>....] - ETA: 11s - loss: nan
+1139/1139 [==============================] - 117s 102ms/step - loss: nan - val_loss: nan
+Epoch 4/100
+
+ 128/1139 [==>...........................] - ETA: 1:39 - loss: nan
+ 256/1139 [=====>........................] - ETA: 1:26 - loss: nan
+ 384/1139 [=========>....................] - ETA: 1:13 - loss: nan
+ 512/1139 [============>.................] - ETA: 1:01 - loss: nan
+ 640/1139 [===============>..............] - ETA: 48s - loss: nan 
+ 768/1139 [===================>..........] - ETA: 36s - loss: nan
+ 896/1139 [======================>.......] - ETA: 23s - loss: nan
+1024/1139 [=========================>....] - ETA: 11s - loss: nan
+1139/1139 [==============================] - 117s 103ms/step - loss: nan - val_loss: nan
+
+Epoch 00004: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 5/100
+
+ 128/1139 [==>...........................] - ETA: 1:36 - loss: nan
+ 256/1139 [=====>........................] - ETA: 1:24 - loss: nan
+ 384/1139 [=========>....................] - ETA: 1:11 - loss: nan
+ 512/1139 [============>.................] - ETA: 59s - loss: nan 
+ 640/1139 [===============>..............] - ETA: 47s - loss: nan
+ 768/1139 [===================>..........] - ETA: 35s - loss: nan
+ 896/1139 [======================>.......] - ETA: 23s - loss: nan
+1024/1139 [=========================>....] - ETA: 11s - loss: nan
+1139/1139 [==============================] - 115s 101ms/step - loss: nan - val_loss: nan
+Epoch 00005: early stopping
+[2019-09-03 00:14:22.387867] - Predictions of model question_pairs_weights_deeper=True_wider=False_lr=0.001_dropout=0.5
+X Contains finite
+Y Contains finite
+X any:  False
+X any True
+Y any:  False
+Y any True
+
+ 32/237 [===>..........................] - ETA: 13s
+ 64/237 [=======>......................] - ETA: 9s 
+ 96/237 [===========>..................] - ETA: 6s
+128/237 [===============>..............] - ETA: 4s
+160/237 [===================>..........] - ETA: 3s
+192/237 [=======================>......] - ETA: 1s
+224/237 [===========================>..] - ETA: 0s
+237/237 [==============================] - 10s 42ms/step
+predictions Contains finite
+Pred any:  True
+Finite any False
+[2019-09-03 00:14:32.302173] - Mean Squared Error:  0.5367569134425296
+[2019-09-03 00:14:32.304710] - Median Absolute Error:  40.970001220703125
+[2019-09-03 00:14:32.304741] - Summary of actual opening price changes
+                 
+count  237.000000
+mean    -0.013671
+std      3.276541
+min    -40.830002
+25%     -0.739990
+50%      0.139999
+75%      1.209999
+max      9.529999
+
+[2019-09-03 00:14:32.321624] - Summary of predicted opening price changes
+                 
+count  237.000000
+mean   -40.830002
+std      0.000000
+min    -40.830002
+25%    -40.830002
+50%    -40.830002
+75%    -40.830002
+max    -40.830002
+[2019-09-03 00:14:32.522338] - Predicted values matched the actual direction 43.04% of the time.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+merge_5 (Merge)              (None, 2048)              0         
+_________________________________________________________________
+dense_9 (Dense)              (None, 1024)              2098176   
+_________________________________________________________________
+dropout_37 (Dropout)         (None, 1024)              0         
+_________________________________________________________________
+output (Dense)               (None, 1)                 1025      
+=================================================================
+Total params: 33,491,633
+Trainable params: 33,491,633
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+[2019-09-03 00:14:45.677615] - Current model: Deeper=False, Wider=True, LR=0.001, Dropout=0.3
+
+[2019-09-03 00:14:45.677678] - Saving Model as question_pairs_weights_deeper=False_wider=True_lr=0.001_dropout=0.3
+[2019-09-03 00:14:45.684026] - Saved model to disk on path /Users/Dimitris/PycharmProjects/stock_deep_learning/model/question_pairs_weights_deeper=False_wider=True_lr=0.001_dropout=0.3.json
+Train on 1139 samples, validate on 201 samples
+Epoch 1/100
+/Users/Dimitris/PycharmProjects/stock_deep_learning/training.py:172: UserWarning: The `Merge` layer is deprecated and will be removed after 08/2017. Use instead layers from `keras.layers.merge`, e.g. `add`, `concatenate`, etc.
+  model.add(Merge([model1, model2], mode='concat'))
+
+ 128/1139 [==>...........................] - ETA: 7:20 - loss: 929095.1875
+ 256/1139 [=====>........................] - ETA: 5:49 - loss: nan        
+ 384/1139 [=========>....................] - ETA: 4:48 - loss: nan
+ 512/1139 [============>.................] - ETA: 3:55 - loss: nan
+ 640/1139 [===============>..............] - ETA: 3:05 - loss: nan
+ 768/1139 [===================>..........] - ETA: 2:17 - loss: nan
+ 896/1139 [======================>.......] - ETA: 1:29 - loss: nan
+1024/1139 [=========================>....] - ETA: 42s - loss: nan 
+1139/1139 [==============================] - 438s 385ms/step - loss: nan - val_loss: nan
+Epoch 2/100
+
+ 128/1139 [==>...........................] - ETA: 5:59 - loss: nan
+ 256/1139 [=====>........................] - ETA: 5:11 - loss: nan
+ 384/1139 [=========>....................] - ETA: 4:27 - loss: nan
+ 512/1139 [============>.................] - ETA: 3:42 - loss: nan
+ 640/1139 [===============>..............] - ETA: 2:57 - loss: nan
+ 768/1139 [===================>..........] - ETA: 2:11 - loss: nan
+ 896/1139 [======================>.......] - ETA: 1:25 - loss: nan
+1024/1139 [=========================>....] - ETA: 40s - loss: nan 
+1139/1139 [==============================] - 426s 374ms/step - loss: nan - val_loss: nan
+Epoch 3/100
+
+ 128/1139 [==>...........................] - ETA: 6:00 - loss: nan
+ 256/1139 [=====>........................] - ETA: 5:10 - loss: nan
+ 384/1139 [=========>....................] - ETA: 4:25 - loss: nan
+ 512/1139 [============>.................] - ETA: 3:40 - loss: nan
+ 640/1139 [===============>..............] - ETA: 2:55 - loss: nan
+ 768/1139 [===================>..........] - ETA: 2:10 - loss: nan
+ 896/1139 [======================>.......] - ETA: 1:25 - loss: nan
+1024/1139 [=========================>....] - ETA: 40s - loss: nan 
+1139/1139 [==============================] - 422s 371ms/step - loss: nan - val_loss: nan
+Epoch 4/100
+
+ 128/1139 [==>...........................] - ETA: 5:50 - loss: nan
+ 256/1139 [=====>........................] - ETA: 5:10 - loss: nan
+ 384/1139 [=========>....................] - ETA: 4:25 - loss: nan
+ 512/1139 [============>.................] - ETA: 3:40 - loss: nan
+ 640/1139 [===============>..............] - ETA: 2:55 - loss: nan
+ 768/1139 [===================>..........] - ETA: 2:10 - loss: nan
+ 896/1139 [======================>.......] - ETA: 1:25 - loss: nan
+1024/1139 [=========================>....] - ETA: 40s - loss: nan 
+1139/1139 [==============================] - 423s 372ms/step - loss: nan - val_loss: nan
+
+Epoch 00004: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 5/100
+
+ 128/1139 [==>...........................] - ETA: 5:54 - loss: nan
+ 256/1139 [=====>........................] - ETA: 5:11 - loss: nan
+ 384/1139 [=========>....................] - ETA: 4:24 - loss: nan
+ 512/1139 [============>.................] - ETA: 3:40 - loss: nan
+ 640/1139 [===============>..............] - ETA: 2:55 - loss: nan
+ 768/1139 [===================>..........] - ETA: 2:10 - loss: nan
+ 896/1139 [======================>.......] - ETA: 1:25 - loss: nan
+1024/1139 [=========================>....] - ETA: 40s - loss: nan 
+1139/1139 [==============================] - 424s 373ms/step - loss: nan - val_loss: nan
+Epoch 00005: early stopping
+[2019-09-03 00:50:24.740145] - Predictions of model question_pairs_weights_deeper=False_wider=True_lr=0.001_dropout=0.3
+X Contains finite
+Y Contains finite
+X any:  False
+X any True
+Y any:  False
+Y any True
+
+ 32/237 [===>..........................] - ETA: 40s
+ 64/237 [=======>......................] - ETA: 29s
+ 96/237 [===========>..................] - ETA: 22s
+128/237 [===============>..............] - ETA: 16s
+160/237 [===================>..........] - ETA: 11s
+192/237 [=======================>......] - ETA: 6s 
+224/237 [===========================>..] - ETA: 1s
+237/237 [==============================] - 36s 153ms/step
+predictions Contains finite
+Pred any:  True
+Finite any False
+[2019-09-03 00:51:00.923287] - Mean Squared Error:  0.5367569134425296
+[2019-09-03 00:51:00.925880] - Median Absolute Error:  40.970001220703125
+[2019-09-03 00:51:00.925911] - Summary of actual opening price changes
+                 
+count  237.000000
+mean    -0.013671
+std      3.276541
+min    -40.830002
+25%     -0.739990
+50%      0.139999
+75%      1.209999
+max      9.529999
+
+[2019-09-03 00:51:00.952476] - Summary of predicted opening price changes
+                 
+count  237.000000
+mean   -40.830002
+std      0.000000
+min    -40.830002
+25%    -40.830002
+50%    -40.830002
+75%    -40.830002
+max    -40.830002
+[2019-09-03 00:51:01.164608] - Predicted values matched the actual direction 43.04% of the time.
+/Users/Dimitris/PycharmProjects/stock_deep_learning/training.py:172: UserWarning: The `Merge` layer is deprecated and will be removed after 08/2017. Use instead layers from `keras.layers.merge`, e.g. `add`, `concatenate`, etc.
+  model.add(Merge([model1, model2], mode='concat'))
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+merge_6 (Merge)              (None, 4096)              0         
+_________________________________________________________________
+dense_10 (Dense)             (None, 2048)              8390656   
+_________________________________________________________________
+dropout_42 (Dropout)         (None, 2048)              0         
+_________________________________________________________________
+output (Dense)               (None, 1)                 2049      
+=================================================================
+Total params: 68,412,337
+Trainable params: 68,412,337
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+[2019-09-03 00:51:48.711890] - Current model: Deeper=False, Wider=True, LR=0.001, Dropout=0.5
+
+[2019-09-03 00:51:48.712001] - Saving Model as question_pairs_weights_deeper=False_wider=True_lr=0.001_dropout=0.5
+[2019-09-03 00:51:48.717055] - Saved model to disk on path /Users/Dimitris/PycharmProjects/stock_deep_learning/model/question_pairs_weights_deeper=False_wider=True_lr=0.001_dropout=0.5.json
+Train on 1139 samples, validate on 201 samples
+Epoch 1/100
+
+ 128/1139 [==>...........................] - ETA: 30:24 - loss: 2688771.2500
+ 256/1139 [=====>........................] - ETA: 25:19 - loss: nan         
+ 384/1139 [=========>....................] - ETA: 21:13 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:29 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:51 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:16 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:42 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:10 - loss: nan
+1139/1139 [==============================] - 1983s 2s/step - loss: nan - val_loss: nan
+Epoch 2/100
+
+ 128/1139 [==>...........................] - ETA: 29:26 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:56 - loss: nan
+ 384/1139 [=========>....................] - ETA: 21:07 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:30 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:53 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:18 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:44 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:11 - loss: nan
+1139/1139 [==============================] - 1993s 2s/step - loss: nan - val_loss: nan
+Epoch 3/100
+
+ 128/1139 [==>...........................] - ETA: 27:45 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:10 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:43 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:15 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:44 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:12 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:41 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:10 - loss: nan
+1139/1139 [==============================] - 1981s 2s/step - loss: nan - val_loss: nan
+Epoch 4/100
+
+ 128/1139 [==>...........................] - ETA: 27:58 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:24 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:53 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:18 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:47 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:15 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:43 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:11 - loss: nan
+1139/1139 [==============================] - 1989s 2s/step - loss: nan - val_loss: nan
+
+Epoch 00004: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 5/100
+
+ 128/1139 [==>...........................] - ETA: 27:44 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:19 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:51 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:18 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:45 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:13 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:43 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:11 - loss: nan
+1139/1139 [==============================] - 1994s 2s/step - loss: nan - val_loss: nan
+Epoch 00005: early stopping
+[2019-09-03 03:37:35.747446] - Predictions of model question_pairs_weights_deeper=False_wider=True_lr=0.001_dropout=0.5
+X Contains finite
+Y Contains finite
+X any:  False
+X any True
+Y any:  False
+Y any True
+
+ 32/237 [===>..........................] - ETA: 1:48
+ 64/237 [=======>......................] - ETA: 1:24
+ 96/237 [===========>..................] - ETA: 1:07
+128/237 [===============>..............] - ETA: 50s 
+160/237 [===================>..........] - ETA: 35s
+192/237 [=======================>......] - ETA: 20s
+224/237 [===========================>..] - ETA: 5s 
+237/237 [==============================] - 114s 481ms/step
+predictions Contains finite
+Pred any:  True
+Finite any False
+[2019-09-03 03:39:29.695210] - Mean Squared Error:  0.5367569134425296
+[2019-09-03 03:39:29.697663] - Median Absolute Error:  40.970001220703125
+[2019-09-03 03:39:29.697694] - Summary of actual opening price changes
+                 
+count  237.000000
+mean    -0.013671
+std      3.276541
+min    -40.830002
+25%     -0.739990
+50%      0.139999
+75%      1.209999
+max      9.529999
+
+[2019-09-03 03:39:29.714544] - Summary of predicted opening price changes
+                 
+count  237.000000
+mean   -40.830002
+std      0.000000
+min    -40.830002
+25%    -40.830002
+50%    -40.830002
+75%    -40.830002
+max    -40.830002
+[2019-09-03 03:39:29.921029] - Predicted values matched the actual direction 43.04% of the time.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+merge_7 (Merge)              (None, 4096)              0         
+_________________________________________________________________
+dense_11 (Dense)             (None, 2048)              8390656   
+_________________________________________________________________
+dropout_47 (Dropout)         (None, 2048)              0         
+_________________________________________________________________
+output (Dense)               (None, 1)                 2049      
+=================================================================
+Total params: 68,412,337
+Trainable params: 68,412,337
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+[2019-09-03 03:40:20.170394] - Current model: Deeper=False, Wider=False, LR=0.001, Dropout=0.3
+
+[2019-09-03 03:40:20.170451] - Saving Model as question_pairs_weights_deeper=False_wider=False_lr=0.001_dropout=0.3
+[2019-09-03 03:40:20.174914] - Saved model to disk on path /Users/Dimitris/PycharmProjects/stock_deep_learning/model/question_pairs_weights_deeper=False_wider=False_lr=0.001_dropout=0.3.json
+Train on 1139 samples, validate on 201 samples
+Epoch 1/100
+/Users/Dimitris/PycharmProjects/stock_deep_learning/training.py:172: UserWarning: The `Merge` layer is deprecated and will be removed after 08/2017. Use instead layers from `keras.layers.merge`, e.g. `add`, `concatenate`, etc.
+  model.add(Merge([model1, model2], mode='concat'))
+
+ 128/1139 [==>...........................] - ETA: 30:16 - loss: 4515103.0000
+ 256/1139 [=====>........................] - ETA: 25:14 - loss: nan         
+ 384/1139 [=========>....................] - ETA: 21:14 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:32 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:54 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:19 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:44 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:11 - loss: nan
+1139/1139 [==============================] - 1993s 2s/step - loss: nan - val_loss: nan
+Epoch 2/100
+
+ 128/1139 [==>...........................] - ETA: 27:50 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:17 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:47 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:30 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:52 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:18 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:44 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:10 - loss: nan
+1139/1139 [==============================] - 1988s 2s/step - loss: nan - val_loss: nan
+Epoch 3/100
+
+ 128/1139 [==>...........................] - ETA: 27:51 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:21 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:47 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:20 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:47 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:14 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:42 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:10 - loss: nan
+1139/1139 [==============================] - 1986s 2s/step - loss: nan - val_loss: nan
+Epoch 4/100
+
+ 128/1139 [==>...........................] - ETA: 27:55 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:19 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:56 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:27 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:52 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:17 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:44 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:11 - loss: nan
+1139/1139 [==============================] - 1990s 2s/step - loss: nan - val_loss: nan
+
+Epoch 00004: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 5/100
+
+ 128/1139 [==>...........................] - ETA: 28:05 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:25 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:51 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:21 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:48 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:15 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:42 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:10 - loss: nan
+1139/1139 [==============================] - 1986s 2s/step - loss: nan - val_loss: nan
+Epoch 00005: early stopping
+[2019-09-03 06:26:10.648961] - Predictions of model question_pairs_weights_deeper=False_wider=False_lr=0.001_dropout=0.3
+X Contains finite
+Y Contains finite
+X any:  False
+X any True
+Y any:  False
+Y any True
+
+ 32/237 [===>..........................] - ETA: 1:51
+ 64/237 [=======>......................] - ETA: 1:25
+ 96/237 [===========>..................] - ETA: 1:07
+128/237 [===============>..............] - ETA: 51s 
+160/237 [===================>..........] - ETA: 36s
+192/237 [=======================>......] - ETA: 20s
+224/237 [===========================>..] - ETA: 6s 
+237/237 [==============================] - 115s 483ms/step
+predictions Contains finite
+Pred any:  True
+Finite any False
+[2019-09-03 06:28:05.206353] - Mean Squared Error:  0.5367569134425296
+[2019-09-03 06:28:05.208935] - Median Absolute Error:  40.970001220703125
+[2019-09-03 06:28:05.208967] - Summary of actual opening price changes
+                 
+count  237.000000
+mean    -0.013671
+std      3.276541
+min    -40.830002
+25%     -0.739990
+50%      0.139999
+75%      1.209999
+max      9.529999
+
+[2019-09-03 06:28:05.235272] - Summary of predicted opening price changes
+                 
+count  237.000000
+mean   -40.830002
+std      0.000000
+min    -40.830002
+25%    -40.830002
+50%    -40.830002
+75%    -40.830002
+max    -40.830002
+[2019-09-03 06:28:05.462684] - Predicted values matched the actual direction 43.04% of the time.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+merge_8 (Merge)              (None, 4096)              0         
+_________________________________________________________________
+dense_12 (Dense)             (None, 2048)              8390656   
+_________________________________________________________________
+dropout_52 (Dropout)         (None, 2048)              0         
+_________________________________________________________________
+output (Dense)               (None, 1)                 2049      
+=================================================================
+Total params: 68,412,337
+Trainable params: 68,412,337
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+[2019-09-03 06:29:00.345648] - Current model: Deeper=False, Wider=False, LR=0.001, Dropout=0.5
+
+[2019-09-03 06:29:00.345759] - Saving Model as question_pairs_weights_deeper=False_wider=False_lr=0.001_dropout=0.5
+[2019-09-03 06:29:00.350667] - Saved model to disk on path /Users/Dimitris/PycharmProjects/stock_deep_learning/model/question_pairs_weights_deeper=False_wider=False_lr=0.001_dropout=0.5.json
+/Users/Dimitris/PycharmProjects/stock_deep_learning/training.py:172: UserWarning: The `Merge` layer is deprecated and will be removed after 08/2017. Use instead layers from `keras.layers.merge`, e.g. `add`, `concatenate`, etc.
+  model.add(Merge([model1, model2], mode='concat'))
+Train on 1139 samples, validate on 201 samples
+Epoch 1/100
+
+ 128/1139 [==>...........................] - ETA: 33:50 - loss: 2841600.0000
+ 256/1139 [=====>........................] - ETA: 28:42 - loss: nan         
+ 384/1139 [=========>....................] - ETA: 23:53 - loss: nan
+ 512/1139 [============>.................] - ETA: 19:04 - loss: nan
+ 640/1139 [===============>..............] - ETA: 14:48 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:50 - loss: nan
+ 896/1139 [======================>.......] - ETA: 7:00 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:17 - loss: nan
+1139/1139 [==============================] - 2044s 2s/step - loss: nan - val_loss: nan
+Epoch 2/100
+
+ 128/1139 [==>...........................] - ETA: 27:16 - loss: nan
+ 256/1139 [=====>........................] - ETA: 23:57 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:27 - loss: nan
+ 512/1139 [============>.................] - ETA: 16:58 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:41 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:14 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:42 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:11 - loss: nan
+1139/1139 [==============================] - 1989s 2s/step - loss: nan - val_loss: nan
+Epoch 3/100
+
+ 128/1139 [==>...........................] - ETA: 27:46 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:14 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:41 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:12 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:41 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:11 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:40 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:09 - loss: nan
+1139/1139 [==============================] - 1973s 2s/step - loss: nan - val_loss: nan
+Epoch 4/100
+
+ 128/1139 [==>...........................] - ETA: 27:37 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:28 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:50 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:16 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:44 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:12 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:41 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:09 - loss: nan
+1139/1139 [==============================] - 1978s 2s/step - loss: nan - val_loss: nan
+
+Epoch 00004: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 5/100
+
+ 128/1139 [==>...........................] - ETA: 27:37 - loss: nan
+ 256/1139 [=====>........................] - ETA: 24:01 - loss: nan
+ 384/1139 [=========>....................] - ETA: 20:33 - loss: nan
+ 512/1139 [============>.................] - ETA: 17:03 - loss: nan
+ 640/1139 [===============>..............] - ETA: 13:34 - loss: nan
+ 768/1139 [===================>..........] - ETA: 10:06 - loss: nan
+ 896/1139 [======================>.......] - ETA: 6:37 - loss: nan 
+1024/1139 [=========================>....] - ETA: 3:07 - loss: nan
+1139/1139 [==============================] - 1960s 2s/step - loss: nan - val_loss: nan
+Epoch 00005: early stopping
+[2019-09-03 09:14:53.728091] - Predictions of model question_pairs_weights_deeper=False_wider=False_lr=0.001_dropout=0.5
+X Contains finite
+Y Contains finite
+X any:  False
+X any True
+Y any:  False
+Y any True
+
+ 32/237 [===>..........................] - ETA: 1:52
+ 64/237 [=======>......................] - ETA: 1:34
+ 96/237 [===========>..................] - ETA: 1:13
+128/237 [===============>..............] - ETA: 55s 
+160/237 [===================>..........] - ETA: 37s
+192/237 [=======================>......] - ETA: 21s
+224/237 [===========================>..] - ETA: 6s 
+237/237 [==============================] - 118s 500ms/step
+predictions Contains finite
+Pred any:  True
+Finite any False
+[2019-09-03 09:16:52.175375] - Mean Squared Error:  0.5367569134425296
+[2019-09-03 09:16:52.177816] - Median Absolute Error:  40.970001220703125
+[2019-09-03 09:16:52.177846] - Summary of actual opening price changes
+                 
+count  237.000000
+mean    -0.013671
+std      3.276541
+min    -40.830002
+25%     -0.739990
+50%      0.139999
+75%      1.209999
+max      9.529999
+
+[2019-09-03 09:16:52.192280] - Summary of predicted opening price changes
+                 
+count  237.000000
+mean   -40.830002
+std      0.000000
+min    -40.830002
+25%    -40.830002
+50%    -40.830002
+75%    -40.830002
+max    -40.830002
+[2019-09-03 09:16:52.417626] - Predicted values matched the actual direction 43.04% of the time.
+
+Process finished with exit code 0
