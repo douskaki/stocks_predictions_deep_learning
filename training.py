@@ -67,14 +67,15 @@ class Training:
 
     def get_best_model(self):
 
-        for deeper in [False]:
-            for wider in [False]:
-                for learning_rate in [0.001]:
-                    for dropout in [0.3]:
-        # for deeper in [True, False]:
-        #     for wider in [True, False]:
+        # Demo purposes
+        # for deeper in [False]:
+        #     for wider in [False]:
         #         for learning_rate in [0.001]:
-        #             for dropout in [0.3, 0.5]:
+        #             for dropout in [0.3]:
+        for deeper in [True, False]:
+            for wider in [True, False]:
+                for learning_rate in [0.001]:
+                    for dropout in [0.3, 0.5]:
 
                         model = self.build_model(deeper, wider, learning_rate, dropout)
 
