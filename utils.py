@@ -89,7 +89,7 @@ def plot_keras_history(history, modelname):
 
 
 def normalize(value, max_value, min_value):
-    return ((value - min_value) / (max_value - min_value))
+    return (value - min_value) / (max_value - min_value)
 
 
 def unnormalize(value, max_value, min_value):

@@ -1,0 +1,502 @@
+/Users/Dimitris/PycharmProjects/stocks_predictions_deep_learning/venv/bin/python /Users/Dimitris/PycharmProjects/stocks_predictions_deep_learning/dataset.py
+Using TensorFlow backend.
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+[2019-09-08 10:21:14.565954] - Loading Datasets...
+[2019-09-08 10:21:14.826082] - Loaded 124165 rows with 2 columns of news headlines
+[2019-09-08 10:21:14.826156] - Duplicate Rows except first occurrence based on all columns are : 0
+[2019-09-08 10:21:14.911711] - Loaded 1811 rows with 7 columns of historical prices of FB stock
+[2019-09-08 10:21:14.953326] - Stocks Length: 1811
+[2019-09-08 10:21:14.953448] - News   Length: 69851
+1810it [00:21, 83.11it/s] 
+
+[2019-09-08 10:21:36.741020] - Prices and Headlines list are equals
+[2019-09-08 10:21:56.353289] - Size of Vocabulary: 44523
+[2019-09-08 10:25:52.121316] - Word embeddings: 2196016
+[2019-09-08 10:25:52.129783] - Number of words missing from GloVe: 127
+[2019-09-08 10:25:52.129845] - Percent of words that are missing from vocabulary: 0.29%
+[2019-09-08 10:25:52.158527] - Number of Words we will use: 36064
+[2019-09-08 10:25:52.162148] - Total Number of Unique Words: 44523
+[2019-09-08 10:25:52.162267] - Percent of Words we will use: 81.01%
+[2019-09-08 10:25:52.381254] - Vocabulary to Integers Length: 36066
+[2019-09-08 10:25:52.381320] - Word Embeddings Matrix Length: 36066
+[2019-09-08 10:25:52.913491] - Total number of words in headlines: 664604
+[2019-09-08 10:25:52.913543] - Total number of UNKs in headlines:  11846
+[2019-09-08 10:25:52.913558] - Percent of words that are UNK:      1.78%
+        counts
+count        0
+unique       0
+[2019-09-08 10:25:53.120488] - Train dataset length: 1538
+[2019-09-08 10:25:53.120544] - Test  dataset length: 272
+WARNING: Logging before flag parsing goes to stderr.
+W0908 10:25:53.120789 140735953478528 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:68: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+W0908 10:25:53.153891 140735953478528 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:507: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+W0908 10:25:53.170117 140735953478528 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3831: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+W0908 10:25:53.191130 140735953478528 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:167: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+W0908 10:25:53.191362 140735953478528 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:174: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+W0908 10:25:53.514971 140735953478528 deprecation.py:506] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3138: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+/Users/Dimitris/PycharmProjects/stocks_predictions_deep_learning/training.py:176: UserWarning: The `Merge` layer is deprecated and will be removed after 08/2017. Use instead layers from `keras.layers.merge`, e.g. `add`, `concatenate`, etc.
+  model.add(Merge([model1, model2], mode='concat'))
+W0908 10:25:54.611042 140735953478528 deprecation_wrapper.py:119] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/optimizers.py:757: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+merge_1 (Merge)              (None, 256)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               32896     
+_________________________________________________________________
+dropout_5 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+output (Dense)               (None, 1)                 129       
+=================================================================
+Total params: 21,859,537
+Trainable params: 21,859,537
+Non-trainable params: 0
+_________________________________________________________________
+None
+
+[2019-09-08 10:25:54.627673] - Current model: Deeper=False, Wider=False, LR=0.001, Dropout=0.3
+
+[2019-09-08 10:25:54.627722] - Saving Model as question_pairs_weights_deeper=False_wider=False_lr=0.001_dropout=0.3
+[2019-09-08 10:25:54.629851] - Saved model to disk on path /Users/Dimitris/PycharmProjects/stocks_predictions_deep_learning/model/question_pairs_weights_deeper=False_wider=False_lr=0.001_dropout=0.3.json
+W0908 10:25:55.346827 140735953478528 deprecation.py:323] From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+Train on 1307 samples, validate on 231 samples
+Epoch 1/100
+
+ 128/1307 [=>............................] - ETA: 50s - loss: 0.6583
+ 256/1307 [====>.........................] - ETA: 30s - loss: 0.4580
+ 384/1307 [=======>......................] - ETA: 21s - loss: 0.3387
+ 512/1307 [==========>...................] - ETA: 16s - loss: 0.2780
+ 640/1307 [=============>................] - ETA: 13s - loss: 0.2390
+ 768/1307 [================>.............] - ETA: 10s - loss: 0.2171
+ 896/1307 [===================>..........] - ETA: 7s - loss: 0.1989 
+1024/1307 [======================>.......] - ETA: 4s - loss: 0.1825
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.1670
+1280/1307 [============================>.] - ETA: 0s - loss: 0.1547
+1307/1307 [==============================] - 23s 17ms/step - loss: 0.1524 - val_loss: 0.0203
+Epoch 2/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0584
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0556
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0498
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0485
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0492 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0488
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0477
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0463
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0456
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0465
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0466 - val_loss: 0.0089
+Epoch 3/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0394
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0362
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0371
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0385
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0370 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0357
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0343
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0341
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0334
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0325
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0322 - val_loss: 0.0088
+Epoch 4/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0353
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0285
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0256
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0250
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0253 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0255
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0251
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0244
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0241
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0244
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0243 - val_loss: 0.0115
+Epoch 5/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0153
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0175
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0169
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0170
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0163 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0163
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0163
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0161
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0157
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0155
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0156 - val_loss: 0.0083
+Epoch 6/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0125
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0138
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0135
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0139
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0133 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0129
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0131
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0132
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0132
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0135
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0134 - val_loss: 0.0068
+Epoch 7/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0094
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0124
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0116
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0110
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0109 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0110
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0109
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0113
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0110
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0108
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0108 - val_loss: 0.0075
+Epoch 8/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0102
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0109
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0107
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0103
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0102 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0100
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0098
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0097
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0096
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0094
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0094 - val_loss: 0.0048
+Epoch 9/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0098
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0089
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0084
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0087
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0086 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0085
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0083
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0083
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0081
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0081
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0081 - val_loss: 0.0046
+Epoch 10/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0069
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0067
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0065
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0064
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0063 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0063
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0063
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0063
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0064
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0065
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0065 - val_loss: 0.0041
+Epoch 11/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0072
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0064
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0063
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0066
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0065 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0060
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0061
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0061
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0061
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0059
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0060 - val_loss: 0.0023
+Epoch 12/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0062
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0058
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0066
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0068
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0065 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0063
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0062
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0062
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0061
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0061
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0061 - val_loss: 0.0019
+Epoch 13/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0053
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0054
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0052
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0052
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0052 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0051
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0052
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0052
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0053
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0052
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0053 - val_loss: 0.0019
+Epoch 14/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0061
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0057
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0053
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0055
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0055 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0054
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0053
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0052
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0051
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0052
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0052 - val_loss: 0.0020
+Epoch 15/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0063
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0055
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0051
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0047
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0047 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0048
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0048
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0047
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0047
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0047
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0047 - val_loss: 0.0023
+Epoch 16/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0048
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0049
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0049
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0050
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0048 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0047
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0048
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0048
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0047
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0047
+1307/1307 [==============================] - 18s 14ms/step - loss: 0.0047 - val_loss: 0.0020
+
+Epoch 00016: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 17/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0049
+ 256/1307 [====>.........................] - ETA: 13s - loss: 0.0046
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0045
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0045
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0045 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0044
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0044
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0044
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0043
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0045
+1307/1307 [==============================] - 19s 14ms/step - loss: 0.0046 - val_loss: 0.0019
+Epoch 18/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0045
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0042
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0044
+ 512/1307 [==========>...................] - ETA: 11s - loss: 0.0046
+ 640/1307 [=============>................] - ETA: 9s - loss: 0.0046 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0046
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0046
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0045
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0046
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0047
+1307/1307 [==============================] - 19s 15ms/step - loss: 0.0047 - val_loss: 0.0018
+Epoch 19/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0050
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0047
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0048
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0049
+ 640/1307 [=============>................] - ETA: 9s - loss: 0.0047 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0047
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0046
+1024/1307 [======================>.......] - ETA: 4s - loss: 0.0045
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0046
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0046
+1307/1307 [==============================] - 20s 15ms/step - loss: 0.0046 - val_loss: 0.0018
+Epoch 20/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0042
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0043
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0049
+ 512/1307 [==========>...................] - ETA: 11s - loss: 0.0047
+ 640/1307 [=============>................] - ETA: 9s - loss: 0.0043 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0043
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0042
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0043
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0043
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0043
+1307/1307 [==============================] - 19s 15ms/step - loss: 0.0042 - val_loss: 0.0018
+Epoch 21/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0055
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0047
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0048
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0045
+ 640/1307 [=============>................] - ETA: 9s - loss: 0.0045 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0044
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0044
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0043
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0043
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0044
+1307/1307 [==============================] - 19s 15ms/step - loss: 0.0044 - val_loss: 0.0017
+Epoch 22/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0059
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0046
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0043
+ 512/1307 [==========>...................] - ETA: 11s - loss: 0.0045
+ 640/1307 [=============>................] - ETA: 9s - loss: 0.0048 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0048
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0047
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0046
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0046
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0045
+1307/1307 [==============================] - 19s 15ms/step - loss: 0.0046 - val_loss: 0.0017
+Epoch 23/100
+
+ 128/1307 [=>............................] - ETA: 17s - loss: 0.0049
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0048
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0044
+ 512/1307 [==========>...................] - ETA: 11s - loss: 0.0046
+ 640/1307 [=============>................] - ETA: 9s - loss: 0.0044 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0043
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0043
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0042
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0041
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0041
+1307/1307 [==============================] - 19s 15ms/step - loss: 0.0041 - val_loss: 0.0017
+
+Epoch 00023: ReduceLROnPlateau reducing learning rate to 4.0000001899898055e-05.
+Epoch 24/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0047
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0044
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0045
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0043
+ 640/1307 [=============>................] - ETA: 9s - loss: 0.0042 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0045
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0044
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0046
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0045
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0046
+1307/1307 [==============================] - 19s 15ms/step - loss: 0.0046 - val_loss: 0.0017
+Epoch 25/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0039
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0048
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0044
+ 512/1307 [==========>...................] - ETA: 11s - loss: 0.0049
+ 640/1307 [=============>................] - ETA: 9s - loss: 0.0048 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0047
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0046
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0046
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0046
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0046
+1307/1307 [==============================] - 19s 15ms/step - loss: 0.0045 - val_loss: 0.0018
+Epoch 26/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0041
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0042
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0045
+ 512/1307 [==========>...................] - ETA: 11s - loss: 0.0045
+ 640/1307 [=============>................] - ETA: 9s - loss: 0.0045 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0046
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0046
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0045
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0045
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0045
+1307/1307 [==============================] - 19s 15ms/step - loss: 0.0045 - val_loss: 0.0018
+
+Epoch 00026: ReduceLROnPlateau reducing learning rate to 8.000000525498762e-06.
+Epoch 27/100
+
+ 128/1307 [=>............................] - ETA: 16s - loss: 0.0046
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0041
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0041
+ 512/1307 [==========>...................] - ETA: 11s - loss: 0.0044
+ 640/1307 [=============>................] - ETA: 9s - loss: 0.0044 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0045
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0044
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0045
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0045
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0044
+1307/1307 [==============================] - 19s 15ms/step - loss: 0.0045 - val_loss: 0.0018
+Epoch 28/100
+
+ 128/1307 [=>............................] - ETA: 15s - loss: 0.0043
+ 256/1307 [====>.........................] - ETA: 14s - loss: 0.0041
+ 384/1307 [=======>......................] - ETA: 12s - loss: 0.0043
+ 512/1307 [==========>...................] - ETA: 10s - loss: 0.0043
+ 640/1307 [=============>................] - ETA: 8s - loss: 0.0042 
+ 768/1307 [================>.............] - ETA: 7s - loss: 0.0042
+ 896/1307 [===================>..........] - ETA: 5s - loss: 0.0042
+1024/1307 [======================>.......] - ETA: 3s - loss: 0.0041
+1152/1307 [=========================>....] - ETA: 2s - loss: 0.0040
+1280/1307 [============================>.] - ETA: 0s - loss: 0.0041
+1307/1307 [==============================] - 19s 15ms/step - loss: 0.0041 - val_loss: 0.0017
+Epoch 00028: early stopping
+[2019-09-08 10:34:57.655700] - Predictions of model question_pairs_weights_deeper=False_wider=False_lr=0.001_dropout=0.3
+
+ 32/272 [==>...........................] - ETA: 3s
+ 64/272 [======>.......................] - ETA: 1s
+ 96/272 [=========>....................] - ETA: 1s
+128/272 [=============>................] - ETA: 0s
+160/272 [================>.............] - ETA: 0s
+192/272 [====================>.........] - ETA: 0s
+224/272 [=======================>......] - ETA: 0s
+256/272 [===========================>..] - ETA: 0s
+272/272 [==============================] - 1s 4ms/step
+[2019-09-08 10:34:58.790952] - Mean Squared Error:  0.0030265403618224144
+[2019-09-08 10:34:58.793755] - Median Absolute Error:  1.045072555541978
+[2019-09-08 10:34:58.793790] - Summary of actual closing price changes
+                 
+count  272.000000
+mean    -0.139890
+std      3.110955
+min    -41.240005
+25%     -0.825005
+50%      0.034999
+75%      1.050000
+max      6.229996
+
+[2019-09-08 10:34:58.809027] - Summary of predicted closing price changes
+                 
+count  272.000000
+mean    -0.644497
+std      0.436866
+min     -1.247189
+25%     -0.970078
+50%     -0.968090
+75%     -0.338697
+max      0.918526
+
+Process finished with exit code 0

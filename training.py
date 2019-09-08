@@ -243,23 +243,24 @@ class Training:
         mae = median_absolute_error(unnorm_y_test, unnorm_predictions)
         print('[' + str(datetime.now()) + '] - ' + "Median Absolute Error: ", mae)
 
-        print('[' + str(datetime.now()) + '] - ' + "Summary of actual opening price changes")
+        print('[' + str(datetime.now()) + '] - ' + "Summary of actual closing price changes")
         print(pd.DataFrame(unnorm_y_test, columns=[""]).describe())
         print()
-        print('[' + str(datetime.now()) + '] - ' + "Summary of predicted opening price changes")
+        print('[' + str(datetime.now()) + '] - ' + "Summary of predicted closing price changes")
         print(pd.DataFrame(unnorm_predictions, columns=[""]).describe())
 
         # Plot the predicted (blue) and actual (green) values
         plt.figure(figsize=(12, 4))
         plt.plot(unnorm_predictions, color='blue')
         plt.plot(unnorm_y_test, color='green')
-        plt.title("Predicted (blue) vs Actual (green) Opening Price Changes")
+        plt.title("Predicted (blue) vs Actual (green) Closing Price Changes")
         plt.xlabel("Testing instances")
-        plt.ylabel("Change in Opening Price")
+        plt.ylabel("Change in Closing Price")
         #plt.show()
         plt.savefig('./images/' + filename + '_pred.png')
 
-        # Create lists to measure if opening price increased or decreased
+
+        # Create lists to measure if opening/closing price increased or decreased
         direction_pred = []
         for pred in unnorm_predictions:
             if pred >= 0:

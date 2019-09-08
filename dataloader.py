@@ -78,8 +78,10 @@ class DataLoader:
         for row in tqdm(self.stocks_final.iterrows()):
             daily_headlines = []
             date = row[1]['Date']
-            price.append(row[1]['Close'])
-            #price.append(row[1]['Open'])
+            if Config.target_close:
+                price.append(row[1]['Close'])
+            else:
+                price.append(row[1]['Open'])
             for row_ in self.news[self.news.Date == date].iterrows():
                 daily_headlines.append(row_[1]['Headline'])
 
@@ -103,19 +105,20 @@ class DataLoader:
     def calculate_prices_periods_differences(self):
         # Calculate the difference in opening prices between the following and current day.
         # The model will try to predict how much the Open value will change based on the news.
-        # dj = self.stocks.set_index('Date').diff(periods=1)
-        # dj['Date'] = dj.index
-        # dj = dj.reset_index(drop=True)
-        # # Remove unneeded features
-        # dj = dj.drop(['High', 'Low', 'Close', 'Volume', 'Adj Close'], 1)
-        # dj = dj[dj.Open.notnull()]
-        # self.stocks_final = dj
-
-        # Not Difference Price
-        dj = self.stocks
-        dj = dj.drop(['High', 'Low', 'Open', 'Volume', 'Adj Close'], 1)
-        dj = dj[dj.Close.notnull()]
-        self.stocks_final = dj
+        if Config.target_close:
+            # Not Difference Price
+            dj = self.stocks
+            dj = dj.drop(['High', 'Low', 'Open', 'Volume', 'Adj Close'], 1)
+            dj = dj[dj.Close.notnull()]
+            self.stocks_final = dj
+        else:
+            dj = self.stocks.set_index('Date').diff(periods=1)
+            dj['Date'] = dj.index
+            dj = dj.reset_index(drop=True)
+            # Remove unneeded features
+            dj = dj.drop(['High', 'Low', 'Close', 'Volume', 'Adj Close'], 1)
+            dj = dj[dj.Open.notnull()]
+            self.stocks_final = dj
 
     def combine_news_dataframes(dfs_list):
         cols = ['Date', 'Headline']

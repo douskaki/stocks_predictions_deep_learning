@@ -1,12 +1,13 @@
 
 """
-Configuration Class holding constant variables
+    Configuration Class holding constant variables
 """
 class Config:
     # Stock information
     stock_name = 'FB'
     from_date = '2012-01-01'
     to_date = '2019-07-31'
+    target_close = True
 
     # Read transformed datasets from local machine
     read_from_local = True

@@ -40,16 +40,18 @@ def main():
     train.split_data(pad_headlines, norm_price)
     train.get_best_model()
 
-    # deeper = True
+
+    # deeper = False
     # wider = False
-    # dropout = 0.5
     # learning_rate = 0.001
+    # dropout = 0.3
 
     # filename = 'question_pairs_weights_deeper={}_wider={}_lr={}_dropout={}'.format(
     #     deeper, wider, learning_rate, dropout)
-    #print('[' + str(datetime.now()) + '] - ' + "Predictions of model " + filename)
-    #model = load_model_from_json(filename)
-    #model = train.make_predictions(model, deeper, wider, dropout, learning_rate)
+    #
+    # print('[' + str(datetime.now()) + '] - ' + "Predictions of model " + filename)
+    # model = load_model_from_json(filename)
+    # model = train.make_predictions(model, deeper, wider, dropout, learning_rate)
 
     # Default news that you can use
     # create_news = "Hundreds of millions of Facebook user records were exposed on Amazon cloud server"
@@ -60,7 +62,7 @@ def main():
     # pad_news = np.array(pad_news).reshape((1,-1))
     # pred = model.predict([pad_news,pad_news])
     # price_change = unnormalize(pred, max(data.price), min(data.price))
-    # print("The Dow should open: {} from the previous open.".format(np.round(price_change[0][0],2)))
+    # print("The stock price should close: {}.".format(np.round(price_change[0][0],2)))
 
 
 if __name__ == "__main__":
